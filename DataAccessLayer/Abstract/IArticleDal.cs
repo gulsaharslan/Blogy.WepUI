@@ -18,5 +18,8 @@ namespace Blogy.DataAccessLayer.Abstract
         List<Article> GetListAll();
         List<Article> GetLast4Article();
 
+        Article GetLatestArticleByWriterId(int id);
+    
+
     }
 }

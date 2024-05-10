@@ -61,5 +61,22 @@ namespace Blogy.DataAccessLayer.EntityFramework
             var values = context.Articles.OrderByDescending(y => y.CreatedDate).Take(4).ToList();
             return values;
         }
+
+        public Article GetLatestArticleByWriter(int id)
+        {
+            var values = context.Articles.Where(x => x.AppUserId == id).OrderByDescending(z => z.CreatedDate).FirstOrDefault();
+
+            return values;
+        }
+
+        public Article GetLatestArticleByWriterId(int id)
+        {
+            var values = context.Articles
+          .Where(x => x.AppUserId == id)
+          .OrderByDescending(z => z.CreatedDate)  
+          .FirstOrDefault();
+
+            return values;
+        }
     }
 }

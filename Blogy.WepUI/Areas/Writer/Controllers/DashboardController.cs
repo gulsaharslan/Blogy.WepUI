@@ -34,7 +34,7 @@ namespace Blogy.WepUI.Areas.Writer.Controllers
             ViewBag.article = _articleService.TGetArticlesByWriter(user.Id).Count();
             ViewBag.comment=_commentService.TGetCommentCountByWriter(user.Id);
             ViewBag.notification = _notificationService.TGetListAll().Count();
-            ViewBag.latestArticle =_context.Articles.OrderByDescending(x => x.CreatedDate).FirstOrDefault().Title.ToString();
+            ViewBag.latestArticle = _articleService.TGetLatestArticleByWriterId(user.Id).Title;
             return View();
         }
     }

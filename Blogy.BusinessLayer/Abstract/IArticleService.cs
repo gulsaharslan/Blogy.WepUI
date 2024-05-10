@@ -16,6 +16,8 @@ namespace Blogy.BusinessLayer.Abstract
         List<Article> TGetLatestArticles(int id);
         List<Article> TGetListAll();
         List<Article> TGetLast4Article();
-        
+        Article TGetLatestArticleByWriterId(int id);
+
+
     }
 }

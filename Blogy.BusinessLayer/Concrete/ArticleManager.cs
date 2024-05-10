@@ -51,6 +51,11 @@ namespace Blogy.BusinessLayer.Concrete
             return _articleDal.GetLast4Article();
         }
 
+        public Article TGetLatestArticleByWriterId(int id)
+        {
+           return _articleDal.GetLatestArticleByWriterId(id);
+        }
+
         public List<Article> TGetLatestArticles(int id)
         {
            return _articleDal.GetLatestArticles(id);

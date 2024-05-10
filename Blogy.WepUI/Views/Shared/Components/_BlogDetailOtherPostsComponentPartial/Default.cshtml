@@ -11,12 +11,11 @@
             <div class="col-md-6 col-lg-3">
                 <div class="blog-entry">
                     <a href="/Blog/BlogDetail/@item.ArticleId" class="img-link">
-                        <img src="@item.CoverImageUrl" alt="Image" class="img-fluid">
+                        <img src="@item.CoverImageUrl" alt="Image" class="img-fluid" style="height:100px">
                     </a>
-                    <span class="date">@item.CreatedDate.ToShortDateString</span>
                     <h2>@item.Title</h2>
                         <p>@(item.Description.Length < 200 ? item.Description : item.Description.Substring(0, 200) + "...")</p>
-                    <p><a href="/Blog/BlogDetail/@item.ArticleId/" class="read-more">Continue Reading</a></p>
+                    <p><a href="/Blog/BlogDetail/@item.ArticleId/" class="read-more">Okumaya Devam et...</a></p>
                 </div>
             </div>
             }
