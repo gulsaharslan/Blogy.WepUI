@@ -1,0 +1,10 @@
+﻿@model List<Blogy.EntityLayer.Concrete.Tag>
+<div class="sidebar-box">
+    <h3 class="heading">Tags</h3>
+    <ul class="tags">
+        @foreach(var item in Model)
+        {
+        <li><a>@item.TagTitle</a></li>
+        }
+    </ul>
+</div>

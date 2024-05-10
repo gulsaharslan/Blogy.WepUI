@@ -1,0 +1,255 @@
+section {
+  position: relative;
+  background-color: white;
+}
+
+.section {
+  padding: 6rem 1.5rem;
+}
+
+.section#styles {
+  padding-bottom: 0.4rem;
+}
+
+.section.hero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+ * ::::::::::: Introduction Section Styles :::::::::::
+ */
+.introduction {
+  background: #fafafa url("../../images/background/1.png") no-repeat left top ;
+  background-color: #fafafa;
+  padding: 8rem 1.5rem;
+}
+
+.introduction .introduction-logo {
+  position: absolute;
+  bottom: -35px;
+  right: 35px;
+}
+
+.introduction p:not(.heading-title-top) {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.introduction .works-latest .works-latest-item.video-icon {
+  margin-top: 50px;
+}
+
+.introduction .works-latest .works-latest-item .works-latest-item-icon.style-2 {
+  position: inherit;
+  top: inherit;
+  left: inherit;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.introduction .works-latest .works-latest-item .works-latest-item-icon.style-2 .label {
+  font-family: 'sky', 'Open Sans', sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #262626;
+}
+
+.introduction .works-latest .works-latest-item .works-latest-item-icon.style-2 .icon {
+  background-color: #e3b276;
+  color: white;
+}
+
+.introduction .works-latest .works-latest-item .works-latest-item-icon.style-2 .icon:hover {
+  background-color: #0a0a0a;
+}
+
+/*
+ * ::::::::::: Services Section Styles :::::::::::
+ */
+.services {
+  background-color: #fafafa;
+  padding-bottom: 6.5rem;
+}
+
+/*
+ * ::::::::::: Services Section Styles :::::::::::
+ */
+.stories {
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(68%, white), color-stop(32%, #fafafa));
+  background: linear-gradient(to bottom, white 68%, #fafafa 32%);
+}
+
+/*
+ * ::::::::::: Works Section Styles :::::::::::
+ */
+.works-list {
+  background-color: white;
+  padding-bottom: 4rem;
+}
+
+/*
+ * ::::::::::: Testimonials Section Styles :::::::::::
+ */
+.testimonials-list {
+  background: #222121 url("../../images/background/2.png") no-repeat center bottom ;
+  background-color: #222121;
+  padding: 5rem 1.5rem;
+}
+
+.testimonials-list .heading-title-top, .testimonials-list .heading-title {
+  color: white;
+}
+
+.menu-section {
+  background: white url("../../images/background/3.png") no-repeat center top ;
+  background-color: white;
+}
+
+/*
+ * ::::::::::: Pricing Table Section Styles :::::::::::
+ */
+.pricingtable {
+  background-color: white;
+}
+
+/*
+ * ::::::::::: Subscribe Section Styles :::::::::::
+ */
+.subscribe-section {
+  background-color: #fafafa;
+  padding: 7.3rem 1.5rem;
+}
+
+.subscribe-section .heading-title {
+  padding-bottom: 27px;
+  margin-bottom: 0 !important;
+}
+
+.subscribe-section .heading-title:after {
+  display: none;
+}
+
+.subscribe-section p {
+  text-align: center;
+  color: #797979;
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+}
+
+/*
+ * ::::::::::: Latest News Section Styles :::::::::::
+ */
+.latest-news,
+.slider {
+  background-color: white;
+}
+
+.latest-news {
+  background: #fafafa url("../../images/background/4.png") no-repeat center bottom ;
+  background-color: #fafafa;
+  padding-bottom: 7rem;
+}
+
+/*
+ * ::::::::::: Get In Touch Section Styles :::::::::::
+ */
+.get-in-touch {
+  background-color: #fafafa;
+  padding-bottom: 6.5rem;
+}
+
+.get-in-touch .box-item p {
+  margin-bottom: 15px;
+}
+
+/*
+ * ::::::::::: Instagram Feed Section Styles :::::::::::
+ */
+.instagram-feed {
+  background: white;
+}
+
+.site-footer-bottom .section {
+  padding: 2.6rem 1.5rem 2.2rem;
+  background: white;
+}
+
+/*
+ * ::::::::::: Intro About Section Styles :::::::::::
+ */
+.intro-about {
+  background-color: white;
+}
+
+/*
+ * ::::::::::: Team Section Styles :::::::::::
+ */
+.our-team {
+  background-color: white;
+  padding-bottom: 4rem;
+}
+
+/*
+ * ::::::::::: Counters Section Styles :::::::::::
+ */
+.counters {
+  background-color: #fafafa;
+}
+
+/*
+ * ::::::::::: Contact form Section Styles :::::::::::
+ */
+.contact-form {
+  background-color: white;
+}
+
+/*
+ * ::::::::::: Hero Custom Sections Styles :::::::::::
+ */
+.hero.carousel {
+  padding: 5rem 0 4rem;
+}
+
+.hero.instagram-feed {
+  padding-bottom: 0;
+}
+
+/*
+ * ::::::::::: Blog Section Styles :::::::::::
+ */
+.content-with-sidebar {
+  background-color: white;
+  padding: 6rem 1.5rem;
+}
+
+/*
+ * ::::::::::: Portfolio Single Work Section Styles :::::::::::
+ */
+.portfolio-single {
+  background-color: white;
+  padding: 6rem 1.5rem;
+}
+
+/*
+ * ::::::::::: Portfolio Related Works Section Styles :::::::::::
+ */
+.related-works {
+  background-color: white;
+}
+
+/*
+ * ::::::::::: Portfolio WorksNavigation Section Styles :::::::::::
+ */
+.works-navigation {
+  background-color: #fafafa;
+  padding: 4rem 1.5rem;
+}
+
+/*# sourceMappingURL=../_maps/modules/sections.css.map */

@@ -1,0 +1,42 @@
+﻿﻿
+@{
+    Layout = null;
+}
+
+<!-- /*
+* Template Name: Blogy
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+@await Component.InvokeAsync("_BlogListHeadComponentPartial")
+<body>
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+    <!-- Navbar -->
+    @await Component.InvokeAsync("_BlogListNavbarComponentPartial")
+    <!-- Content -->
+    @await Component.InvokeAsync("_BlogListComponentPartial")
+    <!-- /.site-footer -->
+    @await Component.InvokeAsync("_BlogListFooterComponentPartial")
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- Scripts -->
+    @await Component.InvokeAsync("_BlogListScriptComponentPartial")
+</body>
+</html>

@@ -1,0 +1,64 @@
+/*
+ * ::::::::::: Buttons Styles :::::::::::
+ */
+.button {
+  border-radius: 0;
+}
+
+.button {
+  text-transform: uppercase;
+}
+
+.button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.button, .button.is-medium, .button.is-large {
+  font-size: 13.5px;
+  font-size: 0.84375rem;
+  height: 3.40em;
+  padding-left: calc(2.5em - 1px);
+  padding-right: calc(2.5em - 1px);
+}
+
+.button {
+  font-family: 'sky', 'Open Sans', sans-serif;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+  background-color: #d8ab74;
+  outline: none;
+  border-radius: 0 !important;
+  font-weight: 600;
+}
+
+.button:hover, .button:focus {
+  color: white;
+  background-color: #222121;
+}
+
+.button.is-large {
+  font-size: 17.5px;
+  font-size: 1.09375rem;
+}
+
+.button.is-outlined {
+  border: 1px solid;
+}
+
+.button.is-outlined:hover, .button.is-outlined:focus {
+  color: white !important;
+}
+
+.button.is-rounded {
+  border-radius: 290486px !important;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/*# sourceMappingURL=../_maps/elements/button.css.map */

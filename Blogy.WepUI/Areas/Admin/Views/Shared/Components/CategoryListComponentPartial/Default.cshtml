@@ -1,0 +1,18 @@
+﻿@model List<Blogy.EntityLayer.Concrete.Category>
+
+    <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title font-weight-medium" style="color:blueviolet"> Son Eklenen Kategoriler </div>
+                                @foreach(var item in Model)
+                                {
+                                <div class="d-flex flex-wrap border-bottom py-2 border-top justify-content-between">
+                                    <div class="pt-2">
+                                        <h6 class="mb-0">@item.CategoryName</h6>
+                                    </div>
+                                </div>
+                                }
+                                <a class="text-black mt-3 d-block font-weight-medium h6"  style="color:cornflowerblue" href="/Admin/Category/CategoryList/">Tümünü Gör <i class="mdi mdi-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>

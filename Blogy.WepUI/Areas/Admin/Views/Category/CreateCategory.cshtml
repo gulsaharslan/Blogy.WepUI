@@ -1,0 +1,40 @@
+﻿@model Blogy.EntityLayer.Concrete.Category
+
+
+@{
+    ViewData["Title"] = "CreateCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title ml-3">Yeni Kategori Ekle</h3>
+        <h1>@ViewBag.id</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Blog İşlemleri</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Yeni Kategori</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Kategori Ekleme Paneli</h4>
+                    <p class="card-description">
+                        Aşağıdaki alanları eksiksiz doldurarak yeni bir kategori oluşturabilirsiniz.
+                    </p>
+                    <form method="post">
+                        <label>Kategori Adı</label>
+                        <input type="text" asp-for="CategoryName" name="CategoryName" class="form-control" />
+                        <br />
+
+                        <button class="btn btn-info">Kategoriyi Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

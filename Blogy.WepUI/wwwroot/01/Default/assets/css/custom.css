@@ -1,0 +1,46 @@
+/*
+ * ::::::::::: Custom Styles :::::::::::
+ * Note: use this file to add or override any other styles.
+ * DON'T EDIT TEMPLATE CSS/SCSS FILES DIRECTLY, JUST USE THIS FILE.
+ */
+
+ .works-latest .works-latest-item .works-latest-item-meta h5 a, .works-latest .works-latest-item .works-latest-item-meta h3 a, .works-latest .works-latest-item .works-latest-item-meta h5, .works-latest-item .works-latest-item-meta h3 {
+  opacity: 1;
+ }
+
+ .testimonials.style-2 .testimonials-item h3 span, .testimonials.style-4 .testimonials-item h3 span {
+    color: #D8D8D8;
+    font-size: 14px;
+}
+
+.hermes .tp-bullet {
+    background-color: #A6A6A6;
+}
+
+.testimonials.style-2.owl-carousel .owl-dots .owl-dot span, .testimonials.style-4.owl-carousel .owl-dots .owl-dot span {
+    opacity: 1;
+}
+
+ body .image-hover figure img {
+     min-height: auto!important;
+ }
+
+ @media screen and (max-width:768px) {
+     body .works-latest .works-latest-item .works-latest-item-meta h3 {
+         font-size: 18px;
+     }
+
+     body .image-hover figure img {
+         min-height: auto!important;
+     }
+
+     body .tp-caption.small_text {
+        display: none;
+    }
+
+    body .tp-caption.large_text {
+        padding-bottom: 0 !important;
+    }
+}
+
+/*# sourceMappingURL=_maps/custom.css.map */

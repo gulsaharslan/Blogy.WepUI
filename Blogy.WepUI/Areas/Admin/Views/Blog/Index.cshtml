@@ -1,0 +1,64 @@
+﻿@model List<Blogy.EntityLayer.Concrete.Article>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">Bloglar</h3>
+        <h1>@ViewBag.id</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Bloglar</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Blog Listesi</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Blog Listesi</h4>
+                    <p class="card-description">
+                        Aşağıdaki tablodan blogları görüntüleyebilir ve işlemler yapabilirsiniz.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Blog Başlığı</th>
+                                    <th>Tarih</th>
+                                    <th>Kategori</th>
+                                    <th>Yazar</th>
+                                    <th>Sil</th>
+                                    <th>Bloga Git</th>
+                                    <th>Blog Yorumları</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.ArticleId</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.CreatedDate.ToShortDateString()</td>
+                                        <td>@item.Category.CategoryName</td>
+                                        <td>@item.AppUser.Name</td>
+                                        <td><a href="/Blog/DeleteBlog/@item.ArticleId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Blog/BlogDetail/@item.ArticleId" class="btn btn-info">Bloga Git</a></td>
+
+                                        <td><a href="/Admin/Comment/BlogComments/@item.ArticleId" class="btn btn-info">Yorumlar</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿@model List<Blogy.EntityLayer.Concrete.Article>
+
+<div class="col-xl-8 col-sm-6 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body px-0 overflow-auto mt-20">
+            <h4 class="card-title pl-4" style="color:blueviolet">Son Eklenen 5 Blog</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="bg-light">
+                        <tr>
+                            <th> #</th>
+
+                            <th>Blog Başlığı</th>
+                            <th>Yazar</th>
+                            <th>Tarih</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/images/articleicon.jpg" alt="image" /></div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        
+                                        <div class="table-user-name ml-3">
+                                            <p class="mb-0 font-weight-light">@item.Title </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>@item.AppUserId</td>
+                            
+                                <td>@item.CreatedDate</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <a class="text-black mt-3 d-block pl-4" href="/Admin/Blog/Index/">
+                <span class="font-weight-medium h6" style="color:cornflowerblue">Tüm Blogları Gör</span>
+                <i class="mdi mdi-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>

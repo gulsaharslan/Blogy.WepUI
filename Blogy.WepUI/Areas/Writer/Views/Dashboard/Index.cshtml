@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/WriterLayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <div class="container">
+        <div class="main-panel">
+            <div class="content-wrapper pb-0">
+
+                <div class="row">
+                    @* hava durumu *@
+                    @await Component.InvokeAsync("WriterAdminWeatherComponentPartial")
+
+                    @* hava durumu *@
+
+                    @* widgets *@
+                    <div class="col-xl-12 col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-warning">
+                                    <div class="card-body px-3 py-4">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="color-card">
+                                                <p class="mb-0 color-card-head">Blog Sayısı</p>
+                                                <h2 class="text-white">
+                                                    @ViewBag.article
+                                                </h2>
+                                            </div>
+                                            <i class="card-icon-indicator mdi mdi-basket bg-inverse-icon-warning"></i>
+                                        </div>
+                                        <h6 class="text-white font-weight-light">Toplam yazılmış blog sayısı</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-danger">
+                                    <div class="card-body px-3 py-4">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="color-card">
+                                                <p class="mb-0 color-card-head">Yorum Sayısı</p>
+                                                <h2 class="text-white">
+                                                    @ViewBag.comment
+                                                </h2>
+                                            </div>
+                                            <i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-danger"></i>
+                                        </div>
+                                        <h6 class="text-white  font-weight-light">Toplam yorum sayısı</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-primary">
+                                    <div class="card-body px-3 py-4">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="color-card">
+                                                <p class="mb-0 color-card-head">Bildirim Sayısı</p>
+                                                <h2 class="text-white">
+                                                    @ViewBag.notification
+                                                </h2>
+                                            </div>
+                                            <i class="card-icon-indicator mdi mdi-briefcase-outline bg-inverse-icon-primary"></i>
+                                        </div>
+                                        <h6 class="text-white  font-weight-light">Toplam bildirim sayısı</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-success">
+                                    <div class="card-body px-3 py-4">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="color-card">
+                                                <p class="mb-0 color-card-head">Yazılan Son Blog</p>
+                                                <h2 class="text-white"> @ViewBag.latestArticle</h2>
+
+                                            </div>
+                                            <i class="card-icon-indicator mdi mdi-account-circle bg-inverse-icon-success"></i>
+                                        </div>
+                                        <h6 class="text-white  font-weight-light">Yazılmış son blog</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @* widgets end *@
+                </div>
+                <div class="row mt-3">
+                    @await Component.InvokeAsync("WriterAdminBlogListComponentPartial")
+                    @await Component.InvokeAsync("WriterAdminNotificationComponentPartial")
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+
+</body>
+</html>

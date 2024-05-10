@@ -1,0 +1,40 @@
+﻿@model Blogy.EntityLayer.Concrete.Category
+
+@{
+    ViewData["Title"] = "CreateCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title ml-3">Kategori Güncelle</h3>
+        <h1>@ViewBag.id</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Kategori İşlemleri</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Kategori Güncelle</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Kategori Güncelleme Paneli</h4>
+                    <p class="card-description">
+                        Aşağıdaki alanları eksiksiz doldurarak kategori güncelleyebilirsiniz.
+                    </p>
+                    <form method="post" action="/Admin/Category/UpdateCategory/">
+                        <input type="hidden" asp-for="CategoryId" name="CategoryId" value="@Model.CategoryId"/>
+                        <label>Kategori Adı</label>
+                        <input type="text" asp-for="CategoryName" class="form-control" name="CategoryName" value="@Model.CategoryName" />
+                        <br />
+
+                        <button class="btn btn-info">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

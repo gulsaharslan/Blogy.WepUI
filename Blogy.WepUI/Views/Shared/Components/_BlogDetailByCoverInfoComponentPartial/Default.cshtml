@@ -1,0 +1,16 @@
+﻿@model Blogy.EntityLayer.Concrete.Article
+
+<div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('@Model.CoverImageUrl');>
+    <div class="container">
+        <div class="row same-height justify-content-center">
+            <div class="col-md-6">
+                <div class="post-entry text-center">
+                    <div class="post-meta align-items-center text-center">
+
+                        <span>&nbsp;-&nbsp; @Model.CreatedDate.ToShortDateString()</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

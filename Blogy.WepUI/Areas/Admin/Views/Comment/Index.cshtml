@@ -1,0 +1,65 @@
+﻿@model List<Blogy.EntityLayer.Concrete.Comment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">Yorumlar</h3>
+        <h1>@ViewBag.id</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Yorumlar</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Yorum Listesi</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yorum Listesi</h4>
+                    <p class="card-description">
+                        Aşağıdaki tablodan yorumları görüntüleyebilir ve işlemler yapabilirsiniz.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Ad Soyad</th>
+                                    <th>Email</th>
+                                    <th>Yorum</th>
+                                    <th>Tarih</th>
+                                    <th>Blog</th>
+                                    <th>Sil</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.CommentId</td>
+                                        <td>@item.NameSurname</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Content</td>
+                                        <td>@item.CommentDate.ToShortDateString()</td>
+                                        <td>@item.ArticleId</td>
+                            
+                                        <td><a href="/Comment/DeleteComment/@item.CommentId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Blog/BlogDetail/@item.ArticleId" class="btn btn-info">Bloga Git</a></td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

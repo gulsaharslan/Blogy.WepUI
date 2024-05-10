@@ -1,0 +1,107 @@
+﻿﻿
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+    <div class="container-scroller">
+
+
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            @await Component.InvokeAsync("_LayoutSidebarComponentPartial")
+
+            <ul class="nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/Dashboard/Index/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Dashboard"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/WriterBlog/MyBlogList/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Bloglarım"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                        <span class="menu-title">Mesajlarım</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Writer/WriterMessage/Inbox/">Gelen Mesajlar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Writer/WriterMessage/Outbox/">Giden Mesajlar</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/WriterSupport/Index/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Destek"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/WriterNotification/NotificationList/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Bildirimler"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/WriterComment/MyCommentList/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Yorumlar"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/Chart/Index/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Grafik"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Writer/WriterSettings/Index/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Ayarlar"]</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/LogOut/LogOut/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">@localizer["Çıkış Yap"]</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+ <div class="container-fluid page-body-wrapper">
+            @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+            <div class="main-panel">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/off-canvas.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/hoverable-collapse.js"></script>
+    <script src="~/Breeze-Free-Bootstrap-Admin-Template-1.0.0/template/assets/js/misc.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
+
+</body>
+</html>

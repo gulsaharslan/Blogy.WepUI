@@ -1,0 +1,73 @@
+﻿@model List<Blogy.EntityLayer.Concrete.AppUser>
+
+@{
+    ViewData["Title"] = "WriterList";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">Yazar Listesi</h3>
+        <h1>@ViewBag.id</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Yazarlar</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Yazar Listesi</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yazar Listesi</h4>
+                    <p class="card-description">
+                        Aşağıdaki tablodan yazarları görüntüleyebilir ve işlemler yapabilirsiniz.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Yazar Adı</th>
+                                    <th>Açıklama</th>
+                                    <th>Görsel</th>
+                                    <th>Onay Durumu</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    bool status = Convert.ToBoolean(item.IsActive);
+
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.ImageUrl</td>
+                                        <td>
+
+                                            @if (status)
+                                            {
+                                                <a href="/Admin/Writer/ChangeApproval/@item.Id" class="btn btn-outline-success">Aktif</a>
+                                            }
+                                            else
+                                            {
+                                                <a href="/Admin/Writer/ChangeApproval/@item.Id" class="btn btn-outline-danger">Pasif</a>
+                                            }
+                                        </td>
+ 
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <br />
+         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

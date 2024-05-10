@@ -1,0 +1,43 @@
+﻿@model List<Blogy.EntityLayer.Concrete.Notification>
+
+@functions {
+    public string FormatCreatedDate(DateTime createdDate)
+    {
+        TimeSpan timeDifference = DateTime.Now - createdDate;
+        if (timeDifference.TotalDays >= 1)
+        {
+            return $"{(int)timeDifference.TotalDays} gün önce";
+        }
+        else if (timeDifference.TotalHours >= 1)
+        {
+            return $"{(int)timeDifference.TotalHours} saat önce";
+        }
+        else
+        {
+            return $"{(int)timeDifference.TotalMinutes} dakika önce";
+        }
+    }
+}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <span class="d-flex justify-content-between">
+                <span>Bildirimler</span>
+                
+            </span>
+        </h4>
+
+        <ul class="gradient-bullet-list border-bottom">
+
+            @foreach(var item in Model)
+            {
+            <li>
+                <h6 class="mb-0">@item.Description</h6>
+                    <p class="text-muted">@FormatCreatedDate(item.CreatedDate)</p>
+            </li>
+            }
+        </ul>
+        <a class="text-black mt-3 mb-0 d-block h6" href="#">View all <i class="mdi mdi-chevron-right"></i></a>
+    </div>
+</div>

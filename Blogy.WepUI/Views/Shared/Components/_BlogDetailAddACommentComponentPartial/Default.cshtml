@@ -1,0 +1,26 @@
+﻿@model CommentViewModel
+
+<div class="comment-form-wrap pt-5">
+    <h3 class="mb-5">Yorum Yazın</h3>
+    <form method="post" action="/Comment/Index/" class="p-5 bg-light">
+        <div class="form-group">
+            <input type="hidden" asp-for="ArticleId" />
+            <label for="name">Adınız Soyadınız</label>
+            <input type="text" class="form-control" id="name" asp-for="NameSurname" name="NameSurname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Adresiniz</label>
+            <input type="email" class="form-control" id="email" asp-for="Email" name="Email">
+        </div>
+
+
+        <div class="form-group">
+            <label for="message">Yorumunuz</label>
+            <textarea name="Content" id="message" asp-for="Content" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Gönder" class="btn btn-primary">
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,162 @@
+﻿@model CreateRegisterViewModel
+@{
+    Layout = null;
+}
+
+@* <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <form method="post">
+    <br />
+    <label>Adınız</label>
+    <input type="text" class="form-control"  asp-for="Name"/>
+    <br />
+    <label>Soyadınız</label>
+    <input type="text" class="form-control"  asp-for=Surname/>
+    <br />
+    <label>Kullanıcı Adınız</label>
+    <input type="text" class="form-control" asp-for="Username"/>
+    <br />
+    <label>Şifre</label>
+    <input type="text" class="form-control" asp-for="Password">
+    <br />
+    <label>Email</label>
+    <input type="text" class="form-control" asp-for="Email"/>
+    <br />
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <br />
+    <button class="btn btn-info">Kayıt Ol</button>
+    </form>
+</div>
+ *@
+
+
+<link rel="stylesheet" href="~/01/Default/assets/css/vendor.min.css?v=1557518172230">
+<link rel="stylesheet" href="~/01/Default/assets/css/styles.min.css?v=1557518172230">
+<link rel="stylesheet" href="~/01/Default/assets/css/custom.css?v=1557518172230">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Open+Sans:300,400&v=1557517928137" rel="stylesheet">
+
+<div id="content-main-wrap" class="is-clearfix">
+    <div id="content-area" class="site-content-area">
+        <div id="content-area-inner" class="site-content-area-inner">
+            <section class="section  is-clearfix">
+                <div class="container">
+                    <br>
+                    <br>
+                    <div class="columns is-variable is-multiline">
+                        <div class="column is-half is-offset-one-quarter">
+                            <div class="tabs-list">
+                                <div class="tabs is-boxed is-centered">
+                                    <ul>
+                                        <li class="is-active">
+                                            <a>
+                                                <span class="icon">
+                                                    <i class="icon-login"></i>
+                                                </span>
+                                                <span>Giriş Yap</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="icon">
+                                                    <i class="icon-user"></i>
+                                                </span>
+                                                <span>Kayıt Ol</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- .tabs -->
+                                <div class="tabs-content">
+                                    <div class="tab-block content">
+                                        <br>
+                                        <form method="post"  action="/Login/Index/" id="login">
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="text" name="UserName" placeholder="Kullanıcı Adı">
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="password" name="Password" placeholder="Şifre">
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                            <div class="field ">
+                                                <div class="control">
+                                                    <div class="level">
+                                                        <div class="level-left">
+                                                            <button type="submit" class="button is-small">Giriş Yap</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                        </form>
+                                    </div>
+                                    <!-- .tab-block -->
+                                    <div class="tab-block content">
+                                        <br>
+                                        <form method="post" action="/Register/Index/" id="register">
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="text" name="Name" placeholder="Ad">
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="text" name="SurName" placeholder="Soyad">
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="text" name="Email" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="text" name="Description" placeholder="Meslek">
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="text" name="UserName" placeholder="Kullanıcı Adı">
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                            <div class="field">
+                                                <div class="control is-expanded">
+                                                    <input class="input" type="password" name="Password" placeholder="Şifre">
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                            <div class="field">
+                                                <div class="control">
+                                                    <button type="submit" class="button is-small">Kayıt Ol</button>
+                                                </div>
+                                            </div>
+                                            <!-- .field -->
+                                        </form>
+                                    </div>
+                                    <!-- .tab-block -->
+                                </div>
+                                <!-- .tabs-content -->
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </section>
+
+        </div>
+        <!-- #content-area-inner -->
+    </div>
+    <!-- #content-area -->
+</div>
+
+<script src="~/01/Default/assets/js/vendor.min.js?v=1557518172230"></script>
+<script src="~/01/Default/assets/js/scripts.min.js?v=1557518172230"></script>
+<script src="~/01/Default/assets/js/custom.js?v=1557518172230"></script>

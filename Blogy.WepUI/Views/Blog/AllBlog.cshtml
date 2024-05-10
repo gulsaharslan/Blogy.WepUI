@@ -1,0 +1,83 @@
+﻿	@model List<Article>﻿
+@{
+    Layout = null;
+}
+
+<!-- /*
+* Template Name: Blogy
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+@await Component.InvokeAsync("_BlogListHeadComponentPartial")
+<body>
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+    <!-- Navbar -->
+    @await Component.InvokeAsync("_BlogListNavbarComponentPartial")
+    <!-- Content -->
+
+	<section class="section">
+		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<h2 class="posts-entry-title">Bloglar</h2>
+				</div>
+				<div class="col-sm-6 text-sm-end"><a href="/Blog/BlogList/" class="read-more">Tüm Blogları Gör</a></div>
+			</div>
+
+			<div class="row">
+
+				@foreach (var item in Model)
+				{
+
+
+					<div class="col-lg-4 mb-4">
+						<div class="post-entry-alt">
+							<a href="/Blog/BlogDetail/@item.ArticleId" class="img-link">
+								<img src="@item.CoverImageUrl" alt="Image" class="img-fluid" style="height:200px; width:350px">
+							</a>
+							<div class="excerpt">
+
+
+								<h2><a href="/Blog/BlogDetail/@item.ArticleId">@item.Title</a></h2>
+								<div class="post-meta align-items-center text-left clearfix">
+									<figure class="author-figure mb-0 me-3 float-start"><img src="@item.AppUser.ImageUrl" alt="Image" class="img-fluid"></figure>
+									<span class="d-inline-block mt-1">By <a href="#">@item.AppUser.Name&nbsp; @item.AppUser.Surname</a></span>
+									<span>&nbsp;-&nbsp; @item.CreatedDate.ToShortDateString()</span>
+								</div>
+
+								<p>@(item.Description.Length < 200 ? item.Description : item.Description.Substring(0, 200) + "...")</p>
+								<p><a href="/Blog/BlogDetail/@item.ArticleId" class="read-more">Devamını okuyun...</a></p>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+
+		</div>
+	</section>
+	<!-- /.site-footer -->
+    @await Component.InvokeAsync("_BlogListFooterComponentPartial")
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- Scripts -->
+    @await Component.InvokeAsync("_BlogListScriptComponentPartial")
+</body>
+</html>
