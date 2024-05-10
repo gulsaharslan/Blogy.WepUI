@@ -34,8 +34,6 @@ Admin Yazar Paneli
 Yazar Dashboard
 ![App Screenshot](https://r.resimlink.com/FCsrMiBa8ubX.jpg)
 
-Yazar Blog Paneli
-![App Screenshot](https://r.resimlink.com/90wKop.jpg)
 
 Yazar Bloga Ait Yorumlar
 ![App Screenshot](https://r.resimlink.com/1Lf6ythgzkPA.jpg)
