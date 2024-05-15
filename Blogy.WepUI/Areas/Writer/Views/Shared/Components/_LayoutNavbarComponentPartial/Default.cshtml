@@ -44,13 +44,12 @@
                     <i class="mdi mdi-earth"></i> Dil Seçiniz
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
-                    <a class="dropdown-item" href="/Writer/Dashboard/Index/?culture=tr"> Türkçe </a>
-                    <a class="dropdown-item" href="/Writer/Dashboard/Index/?culture=fr"> French </a>
-                    <a class="dropdown-item" href="/Writer/Dashboard/Index/?culture=es"> Spain </a>
-                    <a class="dropdown-item" href="/Writer/Dashboard/Index/?culture=en"> English </a>
-                    <a class="dropdown-item" href="/Writer/Dashboard/Index/?culture=it"> Italian </a>
-                    <a class="dropdown-item" href="/Writer/Dashboard/Index/?culture=de"> German </a>
-
+                    <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('tr')"> Türkçe </a>
+                    <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('fr')"> French </a>
+                    <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('es')"> Spain </a>
+                    <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('en')"> English </a>
+                    <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('it')"> Italian </a>
+                    <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('de')"> German </a>
                 </div>
             </li>
             <li class="nav-item nav-profile dropdown border-0">
@@ -71,3 +70,12 @@
         </button>
     </div>
 </nav>
+
+<script>
+    function changeLanguage(culture) {
+        var currentUrl = window.location.href;
+        var newUrl = new URL(currentUrl);
+        newUrl.searchParams.set('culture', culture);
+        window.location.href = newUrl.toString();
+    }
+</script>

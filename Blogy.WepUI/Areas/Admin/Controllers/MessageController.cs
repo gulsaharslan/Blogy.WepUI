@@ -22,6 +22,7 @@ namespace Blogy.WepUI.Areas.Admin.Controllers
 
         public async Task<ActionResult> Inbox()
         {
+            
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             var values = _messageService.TGetMessagesByWriter(user.Id);
             return View(values);
